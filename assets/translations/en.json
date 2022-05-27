@@ -1,0 +1,106 @@
+{
+  "home": "Home",
+  "employees": "Employees",
+  "person_with_special_needs": "Persons with Special Needs",
+  "donation": "Donation",
+  "volunteer": "Volunteer",
+  "sponsorships": "Sponsorships",
+  "notifications": "Notifications",
+  "settings": "Settings",
+  "search": "Search",
+  "charity_name": "Ataa Charitable Organization\nfor persons with special needs",
+  "donation_details": "Donation Details",
+  "medical": "Medical Donations",
+  "educational": "Educational Donations",
+  "entertainment": "Entertainment Donations",
+  "other": "Other",
+  "donator": {
+    "zero": "{} Donator",
+    "one": "Donator",
+    "many": "{} Donators",
+    "other": "{} Donators"
+  },
+  "volunteer_person": {
+    "zero": "No Volunteers",
+    "one": "One Volunteer",
+    "two": "{} Volunteers",
+    "few": "{} Volunteers",
+    "many": "{} Volunteers",
+    "other": "{} Volunteers"
+  },
+  "specializations": {
+    "zero": "No Specializations",
+    "one": "One Specialization",
+    "two": "{} Specializations",
+    "few": "{} Specializations",
+    "many": "{} Specializations",
+    "other": "{} Specializations"
+  },
+  "employee": {
+    "zero": "No Employees",
+    "one": "One Employee",
+    "two": "{} Employees",
+    "few": "{} Employees",
+    "many": "{} Employees",
+    "other": "{} Employees"
+  },
+  "admin": {
+    "zero": "No Admins",
+    "one": "One Admin",
+    "two": "{} Admins",
+    "few": "{} Admins",
+    "many": "{} Admins",
+    "other": "{} Admins"
+  },
+  "amount": {
+    "zero": "{} millon sp",
+    "one": "One million sp",
+    "many": "{} millions sp",
+    "other": "{} millions sp"
+  },
+  "total": {
+    "zero": "millon sp",
+    "one": "million sp",
+    "many": "millions sp",
+    "other": "millions sp"
+  },
+  "active_operation": "Active Operations",
+  "donation_op": "Donation Campaigns",
+  "volunteer_op": "Volunteer Campaigns",
+  "sponsorship_op": "Active Sponsorships",
+  "volunteer_details": "Volunteer Details",
+  "tot_vol_count": "Total number of volunteers",
+  "tot_vol_spe": "volunteer specializations count",
+  "campaign": {
+    "one": "campaign",
+    "few": "{} campaigns",
+    "many": "{} campaigns",
+    "other": "{} campaigns"
+  },
+  "sponsorship": {
+    "one": "sposorship",
+    "few": "{} sposorships",
+    "many": "{} sposorships",
+    "other": "{} sposorships"
+  },
+  "total_employees_num": "Number of Employees",
+  "total_admins_num": "Number of Admins",
+  "personal_id": "ID",
+  "first_name": "First name",
+  "last_name": "Last name",
+  "role": "Role",
+  "full_name": "Full name",
+  "phone_number": "Phone number",
+  "email": "Email",
+  "work_start_date": "Work start date",
+  "work_end_date": "Work end date",
+  "personal_information": "Personal Information",
+  "official_docs": "Official Documents",
+  "download": "Download",
+  "employee_role": "employee",
+  "admin_role": "Admin",
+  "address": "Address",
+  "city": "City",
+  "state": "State",
+  "resume": "Resume"
+}

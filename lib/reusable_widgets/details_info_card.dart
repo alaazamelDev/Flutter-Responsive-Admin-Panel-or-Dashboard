@@ -1,19 +1,22 @@
+import 'package:admin/constants.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-import '../../../constants.dart';
-
-class StorageInfoCard extends StatelessWidget {
-  const StorageInfoCard({
+class DetailsInfoCard extends StatelessWidget {
+  const DetailsInfoCard({
     Key? key,
+    this.subtitle,
+    this.cardColor,
+    this.svgSrc,
     required this.title,
-    required this.svgSrc,
-    required this.amountOfFiles,
-    required this.numOfFiles,
+    required this.leading,
   }) : super(key: key);
 
-  final String title, svgSrc, amountOfFiles;
-  final int numOfFiles;
+  final String title;
+  final String? svgSrc;
+  final Widget? subtitle;
+  final Widget leading;
+  final Color? cardColor;
 
   @override
   Widget build(BuildContext context) {
@@ -21,18 +24,27 @@ class StorageInfoCard extends StatelessWidget {
       margin: EdgeInsets.only(top: defaultPadding),
       padding: EdgeInsets.all(defaultPadding),
       decoration: BoxDecoration(
-        border: Border.all(width: 2, color: primaryColor.withOpacity(0.15)),
+        border: Border.all(
+          width: 2,
+          color: cardColor != null
+              ? cardColor!.withOpacity(0.15)
+              : primaryColor.withOpacity(0.15),
+        ),
         borderRadius: const BorderRadius.all(
           Radius.circular(defaultPadding),
         ),
       ),
       child: Row(
         children: [
-          SizedBox(
-            height: 20,
-            width: 20,
-            child: SvgPicture.asset(svgSrc),
-          ),
+          if (svgSrc != null)
+            SizedBox(
+              height: 20,
+              width: 20,
+              child: SvgPicture.asset(
+                svgSrc!,
+                color: cardColor ?? primaryColor,
+              ),
+            ),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: defaultPadding),
@@ -44,18 +56,12 @@ class StorageInfoCard extends StatelessWidget {
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
-                  Text(
-                    "$numOfFiles Files",
-                    style: Theme.of(context)
-                        .textTheme
-                        .caption!
-                        .copyWith(color: Colors.white70),
-                  ),
+                  if (subtitle != null) subtitle!,
                 ],
               ),
             ),
           ),
-          Text(amountOfFiles)
+          leading,
         ],
       ),
     );

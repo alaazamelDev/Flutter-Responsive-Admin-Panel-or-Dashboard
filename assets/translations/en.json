@@ -296,5 +296,6 @@
   "no_don_op_for_camp": "No donations are registered for this campaign",
   "login_title": "Enter your email and password to log into your account",
   "login": "Login",
-  "login_to_account": "Login into employee account"
+  "login_to_account": "Login into employee account",
+  "charity_activities": "Charity activities"
 }

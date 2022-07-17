@@ -7,7 +7,6 @@ import 'package:admin/widgets/widgets.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class NotificationsPageFragment extends StatelessWidget {
   const NotificationsPageFragment({
@@ -216,33 +215,33 @@ class NotificationsPageFragment extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(
-            height: MediaQuery.of(context).size.height * 0.45,
-            child: ListView.builder(
-              scrollDirection: Axis.horizontal,
-              physics: const BouncingScrollPhysics(),
-              padding: const EdgeInsets.symmetric(
-                vertical: defaultPadding * 0.5,
-                horizontal: defaultPadding * 0.5,
-              ),
-              itemCount: requests.length,
-              itemBuilder: (context, index) {
-                return RequestCard(
-                  request: requests[index],
-                );
-              },
-            ),
-          ),
-          Flexible(
-            child: Center(
-              child: Flexible(
-                child: SvgPicture.asset(
-                  'assets/icons/logo.svg',
-                  fit: BoxFit.contain,
-                ),
-              ),
-            ),
-          ),
+          // SizedBox(
+          //   height: MediaQuery.of(context).size.height * 0.45,
+          //   child: ListView.builder(
+          //     scrollDirection: Axis.horizontal,
+          //     physics: const BouncingScrollPhysics(),
+          //     padding: const EdgeInsets.symmetric(
+          //       vertical: defaultPadding * 0.5,
+          //       horizontal: defaultPadding * 0.5,
+          //     ),
+          //     itemCount: requests.length,
+          //     itemBuilder: (context, index) {
+          //       return RequestCard(
+          //         request: requests[index],
+          //       );
+          //     },
+          //   ),
+          // ),
+          // Flexible(
+          //   child: Center(
+          //     child: Flexible(
+          //       child: SvgPicture.asset(
+          //         'assets/icons/logo.svg',
+          //         fit: BoxFit.contain,
+          //       ),
+          //     ),
+          //   ),
+          // ),
         ],
       ),
     );
@@ -440,47 +439,6 @@ class RequestCard extends StatelessWidget {
               ),
             )
           ],
-        ),
-      ),
-    );
-  }
-}
-
-class BigButton extends StatelessWidget {
-  const BigButton({
-    Key? key,
-    required this.title,
-    required this.icon,
-    this.onPressed,
-  }) : super(key: key);
-
-  final String title;
-  final IconData icon;
-  final VoidCallback? onPressed;
-
-  @override
-  Widget build(BuildContext context) {
-    return InkWell(
-      onTap: onPressed,
-      borderRadius: BorderRadius.circular(10),
-      child: DataCard(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-            vertical: defaultPadding * 0.5,
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Text(
-                title,
-                style: const TextStyle(color: primaryColor),
-              ),
-              Icon(
-                icon,
-                color: primaryColor.withOpacity(0.75),
-              ),
-            ],
-          ),
         ),
       ),
     );

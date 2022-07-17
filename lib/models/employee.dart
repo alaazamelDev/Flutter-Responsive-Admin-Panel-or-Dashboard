@@ -50,7 +50,7 @@ class Employee {
         cvFileUrl = json['cv_docu'],
         startDate = json['start_date'],
         endDate = json['end_date'],
-        isAdmin = json['admin'],
+        isAdmin = json['admin'] == 1 ? true : false,
         resumeFileName = null;
 }
 

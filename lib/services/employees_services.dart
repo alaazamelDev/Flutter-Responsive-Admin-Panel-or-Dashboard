@@ -7,16 +7,16 @@ import 'dart:io';
 import 'package:admin/config/helper.dart';
 import 'package:admin/exceptions/server_exception.dart';
 import 'package:admin/models/employee.dart';
+import 'package:admin/services/service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 import 'package:http/http.dart';
 
-class EmployeesServices {
+class EmployeesServices extends Service {
   // CLASS NAME FOR DEBUGGING PURPOSES IN CAPITAL CASE
   static const String className = 'EmployeesServices';
 
   // EMPLOYEES ENDPOINT BASE URL
-  final String baseUrl = 'https://ataa-management-system.herokuapp.com/api';
   final String employeesEndpoint = '/emp';
 
   // GET EMPLOYEES

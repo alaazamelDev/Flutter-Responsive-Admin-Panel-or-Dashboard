@@ -5,3 +5,4 @@ export 'login_service.dart';
 export 'persons_services.dart';
 export 'supportive_organizations_services.dart';
 export 'upload_file_service.dart';
+export 'service.dart';

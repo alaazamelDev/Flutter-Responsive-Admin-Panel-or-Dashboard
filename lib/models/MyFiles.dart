@@ -1,4 +1,4 @@
-import 'package:admin/constants.dart';
+import 'package:admin/config/constants.dart';
 import 'package:flutter/material.dart';
 
 class CloudStorageInfo {
@@ -30,7 +30,7 @@ List demoMyFiles = [
     numOfFiles: 1328,
     svgSrc: "assets/icons/google_drive.svg",
     totalStorage: "2.9GB",
-    color: Color(0xFFFFA113),
+    color: const Color(0xFFFFA113),
     percentage: 35,
   ),
   CloudStorageInfo(
@@ -38,7 +38,7 @@ List demoMyFiles = [
     numOfFiles: 1328,
     svgSrc: "assets/icons/one_drive.svg",
     totalStorage: "1GB",
-    color: Color(0xFFA4CDFF),
+    color: const Color(0xFFA4CDFF),
     percentage: 10,
   ),
   CloudStorageInfo(
@@ -46,7 +46,7 @@ List demoMyFiles = [
     numOfFiles: 5328,
     svgSrc: "assets/icons/drop_box.svg",
     totalStorage: "7.3GB",
-    color: Color(0xFF007EE5),
+    color: const Color(0xFF007EE5),
     percentage: 78,
   ),
 ];

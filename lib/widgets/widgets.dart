@@ -1,3 +1,4 @@
+export 'big_button.dart';
 export 'custom_appbar.dart';
 export 'data_card.dart';
 export 'details_info_card.dart';

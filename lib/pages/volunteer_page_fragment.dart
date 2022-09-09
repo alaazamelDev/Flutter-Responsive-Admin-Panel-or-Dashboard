@@ -2,7 +2,6 @@ import 'package:admin/config/constants.dart';
 import 'package:admin/widgets/widgets.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class VolunteerPageFragment extends StatelessWidget {
   const VolunteerPageFragment({
@@ -12,7 +11,7 @@ class VolunteerPageFragment extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.of(context).size.height * 0.9,
+      height: MediaQuery.of(context).size.height,
       child: Column(
         children: [
           const CustomAppBar(
@@ -21,18 +20,28 @@ class VolunteerPageFragment extends StatelessWidget {
             ),
           ),
           Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset(
-                  'assets/images/under_construction.svg',
-                  width: MediaQuery.of(context).size.width * 0.6,
-                ),
-                const SizedBox(
-                  height: defaultPadding,
-                ),
-                const Text('page_under_cons').tr(),
-              ],
+            child: SingleChildScrollView(
+              physics: const BouncingScrollPhysics(),
+              padding: const EdgeInsets.symmetric(
+                vertical: defaultPadding,
+              ),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  
+                  BigButton(
+                    title: tr('volunteers'),
+                    icon: Icons.group_outlined,
+                    onPressed: () async {},
+                  ),
+                  const SizedBox(height: defaultPadding * 0.75),
+                  BigButton(
+                    title: tr('charity_activities'),
+                    icon: Icons.work_outline_rounded,
+                    onPressed: () async {},
+                  ),
+                ],
+              ),
             ),
           ),
         ],

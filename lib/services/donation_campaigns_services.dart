@@ -4,15 +4,14 @@ import 'dart:io';
 import 'package:admin/config/helper.dart';
 import 'package:admin/exceptions/server_exception.dart';
 import 'package:admin/models/donation_campaign.dart';
+import 'package:admin/services/services.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
-class DonationCampaignsServices {
+class DonationCampaignsServices extends Service {
   // CLASS NAME FOR DEBUGGING PURPOSES IN CAPITAL CASE
   static const String className = 'DonationCampaignsServices';
 
-  // DONATION CAMPAIGNS ENDPOINT BASE URL
-  final String baseUrl = 'https://ataa-management-system.herokuapp.com/api';
   final String donationCampaignsEndpoint = '/donation-campaign';
 
   // GET DONATION CAMPANIGNS

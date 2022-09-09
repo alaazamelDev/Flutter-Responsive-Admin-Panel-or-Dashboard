@@ -4,15 +4,14 @@ import 'dart:io';
 import 'package:admin/config/helper.dart';
 import 'package:admin/exceptions/server_exception.dart';
 import 'package:admin/models/supportive_organization.dart';
+import 'package:admin/services/service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
-class SupportiveOrganizationsServices {
+class SupportiveOrganizationsServices extends Service {
   // CLASS NAME FOR DEBUGGING PURPOSES IN CAPITAL CASE
   static const String className = 'SupportiveOrganizationsServices';
 
-  // EMPLOYEES ENDPOINT BASE URL
-  final String baseUrl = 'https://ataa-management-system.herokuapp.com/api';
   final String organizationsEndpoint = '/organization';
 
   // GET SUPPORTIVE ORGANIZATIONS
